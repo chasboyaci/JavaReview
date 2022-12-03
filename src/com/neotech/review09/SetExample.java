@@ -20,7 +20,7 @@ public class SetExample {
 	//can't store duplicates
 	//doesn't promise to keep the insertion order 
 	//HashSet | LinkedHashSet | TreeSet (Three classes implementing the list interface)
-	//HashSet: are faster, don't care about the insertion order 
+	//HashSet: are faster, don't care about the insertion order. Will print in random order 
 	//LinkedHashSet: keeps insertion order 
 	//TreeSet: it sorts from smallest to the largest or alphabetically 
 	
@@ -82,13 +82,18 @@ public class SetExample {
 		
 		//USING Enhanced for loop
 		
-		for(String africa : africaHash)
+		for(String country : africaHash)
 		{
-			System.out.println(africa);
+			System.out.println(country);
 		}
 		
+		//USING INTERATOR
 		Iterator <String> africa1 = africaHash.iterator();
-		System.out.println(africa1.next());
+		while(africa1.hasNext())
+		{
+			String country = africa1.next();
+			System.out.println(country);
+		}
 		
 		
 		
